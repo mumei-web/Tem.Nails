@@ -48,7 +48,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f5f5dc;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   text-align: center;
 }
 
@@ -76,75 +77,88 @@ nav a {
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 30px;
-  background: #f5f5f5;
-  color: #333;
-}
-
-nav a:hover {
-  background: var(--main);
+  background: #7B8A4D;
   color: #fff;
 }
 
-/* ===== セクション（重要） ===== */
+nav a:hover {
+  background: #2f4f2f;
+}
+
+/* ===== セクション共通 ===== */
 section {
   width: 100%;
   padding: 80px 20px;
 }
 
-/* 中身（これが本体） */
 .section-inner {
-  max-width: 1400px;   /* ←広げる */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 40px 60px;
-
-  background: rgba(255,255,255,0.45);
+  background: rgba(123,138,77,0.7);
   backdrop-filter: blur(10px);
   border-radius: 16px;
 }
 
-/* ===== SERVICE ===== */
-.about-flex {
+.section-inner h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* ===== SERVICE / ABOUT 横並び ===== */
+.about-flex,
+.about-content,
+#point .about-content {
   display: flex;
   align-items: center;
   gap: 40px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.about-flex img {
-  max-width: 500px;
+.about-flex img,
+.about-images img,
+#point .about-images img {
   width: 100%;
+  max-width: 500px;
   border-radius: 15px;
-}
-
-#about ul {
-  list-style: none;
-  text-align: center;
-  margin-top: 20px;
-}
-
-#about li {
-  display: inline-block;
-  margin: 10px;
-}
-
-/* ===== ABOUT ===== */
-#point {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.about-images {
-  display: flex;
-  gap: 20px;
-}
-
-.about-images img {
-  height: 300px;
   object-fit: cover;
-  border-radius: 15px;
 }
 
+.about-text,
+#point .about-text {
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .about-flex,
+  .about-content,
+  #point .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-text,
+  #point .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-images img,
+  #point .about-images img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+
+/* ===== GALLERY ===== */
 /* ===== GALLERY ===== */
 .gallery {
   display: grid;
@@ -164,32 +178,118 @@ section {
   transform: scale(1.05);
 }
 
-/* ===== STAFF ===== */
-#staff .spa-card img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+/* ギャラリー内テキスト */
+.gallery-text {
+  grid-column: 1 / -1; /* 3カラム分を使う */
+  padding: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: break-word;      /* 長い文章も枠内に収める */
+  overflow-wrap: break-word;   /* 安全策 */
 }
 
-/* ===== ボタン ===== */
-.reserve-btn {
+/* ===== STAFF ===== */
+#staff .section-inner {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.staff-card {
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+@media (hover: hover) {
+  .staff-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  }
+}
+
+#staff .spa-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.staff-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #4f6f52;
+}
+
+.staff-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 1280px) {
+  #staff .section-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .staff-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .staff-card {
+    max-width: 240px;
+  }
+
+  #staff .section-inner {
+    gap: 80px;
+  }
+}
+
+/* ===== RESERVE / Instagram ===== */
+.reserve-btn,
+.instagram-section .insta-btn {
   display: inline-block;
-  background: linear-gradient(135deg,#6b8e23,#4f6f52);
-  color: #fff;
+  margin-top: 20px;
   padding: 14px 28px;
   border-radius: 30px;
-}
-
-/* ===== Instagram ===== */
-#instagram .insta-btn {
-  display: block;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
   background: linear-gradient(135deg,#6b8e23,#4f6f52);
   color: #fff;
+  text-decoration: none;
+}
+
+.reserve-section,
+.instagram-section .reserve-section {
+  position: relative;
   text-align: center;
-  border-radius: 30px;
+  padding: 80px 20px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.reserve-section h2,
+.instagram-section h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.instagram-section .reserve-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
 }
 
 /* ===== MAP ===== */
@@ -207,156 +307,67 @@ footer {
   padding: 30px;
 }
 
-/* ===== スマホ ===== */
-@media (max-width: 768px) {
-
-  .about-flex,
-  #point {
-    flex-direction: column;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .section-inner {
-    padding: 20px;
-  }
-}
-.section-inner h2 {
+/* ===== ABOUTセクション修正版 (#point) ===== */
+#point h2 {
   text-align: center;
-  margin-bottom: 30px;
+  color: #fff;
   font-size: 28px;
   letter-spacing: 2px;
+  margin-bottom: 20px;
 }
-@media (max-width: 768px) {
-  .about-images {
-    flex-direction: column;
-    align-items: center; /* 中央寄せ */
-  }
 
-  .about-images img {
-    width: 100%;
-    max-width: 300px;   /* ←ここで大きさ制御（重要） */
-    height: auto;
-  }
+#point .about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-.reserve-center {
-  text-align: center;
-}
-/* ===== STAFFレイアウト ===== */
 
-/* PC：横並び */
-#staff .section-inner {
+#point .about-text {
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
+}
+
+#point .about-images {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap; /* 画面狭いPCでも崩れないように */
-}
-
-/* スタッフカード */
-.staff-card {
-  text-align: center;
-}
-
-/* スマホ：縦並び中央 */
-@media (max-width: 1280px) {
-  #staff .section-inner {
-    gap: 80px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .staff-card {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-#staff .spa-card img {
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-#staff h2 {
   width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 28px;
-  letter-spacing: 2px;
-}
-/* ===== STAFFカード（プロ仕様） ===== */
-
-/* カード全体 */
-.staff-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  padding: 25px 20px;
-  text-align: center;
-
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  transition: 0.3s;
 }
 
-/* ホバーで浮く（PCのみ） */
-@media (hover: hover) {
-  .staff-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  }
-}
-
-/* スタッフ画像 */
-#staff .spa-card img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+#point .about-images img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
   object-fit: cover;
-
-  margin-bottom: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* 名前 */
-.staff-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #4f6f52;
-}
-
-/* コメント */
-.staff-card p {
-  font-size: 14px;
-  color: #666;
-}
-
-/* ===== PC：余白広げる ===== */
-@media (min-width: 1200px) {
-  #staff .section-inner {
-    gap: 80px;
-  }
-
-  .staff-card {
-    max-width: 240px;
-  }
-}
-
-/* ===== スマホ：中央＋縦並び ===== */
 @media (max-width: 768px) {
-  #staff .section-inner {
+  #point .about-content {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  .staff-card {
-    width: 100%;
+  #point .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  #point .about-images img {
     max-width: 300px;
+    margin-top: 20px;
   }
 }
+/* ===== RESERVE ===== */
 .reserve-section {
   position: relative;
   text-align: center;
   padding: 80px 20px;
   overflow: hidden;
-  color: #fff; /* 見出し文字を白に */
+  color: #fff;
 }
 
 .reserve-section h2 {
@@ -373,23 +384,8 @@ footer {
   left: 0;
   width: 100%;
   object-fit: cover;
-  z-index: 0;
   height: 100%;
-}
-
-/* PC高さ調整 */
-@media (min-width: 769px) {
-  .reserve-section {
-    height: 400px; /* PCで大きすぎない */
-  }
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .reserve-section {
-    height: auto;
-    padding: 60px 20px;
-  }
+  z-index: 0;
 }
 
 .reserve-section .reserve-btn {
@@ -400,5 +396,48 @@ footer {
   color: #fff;
   padding: 14px 28px;
   border-radius: 30px;
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .reserve-section {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reserve-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
+/* ===== Instagram セクション ===== */
+.instagram-section .reserve-section {
+  background: url('imagesTem/Tem8.jpg') center/cover no-repeat;
+}
+
+.instagram-section .reserve-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.instagram-section h2,
+.instagram-section .insta-btn {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.instagram-section .insta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#6b8e23,#4f6f52);
+  color: #fff;
   text-decoration: none;
 }
