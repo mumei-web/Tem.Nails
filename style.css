@@ -351,3 +351,22 @@ footer {
     max-width: 300px;
   }
 }
+.reserve-section {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px; /* 上下の余白 */
+  background: url('imagesTem/Tem1.jpg') center/cover no-repeat;
+}
+
+.reserve-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* ボタンや文字を見やすくするオーバーレイ */
+  z-index: 1;
+}
+
+.reserve-section .reserve-btn {
+  position: relative;
+  z-index: 2; /* ボタンを前面に表示 */
+}
