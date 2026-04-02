@@ -13,19 +13,11 @@
 <style>
 
 body{
+  margin:0;
+  font-family:'Noto Sans JP',sans-serif;
+  color:#333;
 
-margin:0;
-font-family:'Noto Sans JP',sans-serif;
-color:#333;
-
-background-image:
-linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
+  background: linear-gradient(135deg, #e9f0e5, #cfdccf);
 }
 
 /* タイトル */
@@ -122,6 +114,26 @@ border:1px solid rgba(255,255,255,0.6);
 background:#8c6b3f;
 color:white;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin: 50px 0 30px;
+  }
+
+  .menu-section {
+    padding: 25px 20px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .menu-price {
+    align-self: flex-end;
+  }
+}
 
 </style>
 
@@ -138,148 +150,134 @@ color:white;
 <div class="container">
 
 
-<!-- HEAD SPA -->
+<!-- geloff -->
 
 <div class="menu-section">
 
-<div class="menu-title">HEAD SPA</div>
+<div class="menu-title">ジェルオフ/付け替え時<br>※オフのみは+¥1,100</div>
 
 <div class="menu-item">
-<div class="menu-name">極上ヘッドスパ 70min</div>
-<div class="menu-price">¥15,000</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">ムートンホイップフェイシャルヘッドスパ 90min</div>
-<div class="menu-price">¥18,000</div>
+<div class="menu-name">当店ジェルオフ<br>※次回予約のお客様は無料</div>
+<div class="menu-price">¥750</div>
 </div>
 
 <div class="menu-item">
-<div class="menu-name">ムートンホイップフェイシャルヘッドスパpremium 120min</div>
-<div class="menu-price">¥23,000</div>
+  <div class="menu-name">他店様ジェルオフ（パーツ・長さ出し無し）</div>
+  <div class="menu-price">¥1,300</div>
 </div>
 
 <div class="menu-item">
-<div class="menu-name">※オプション ReFa VEENA</div>
-<div class="menu-price">¥1,000</div>
+  <div class="menu-name">他店様ジェルオフ（パーツ・長さ出し有り）</div>
+  <div class="menu-price">¥1,850</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-name">他店様スカルプオフ</div>
+<div class="menu-price">¥2,400</div>
 </div>
 
 </div>
 
 
-<!-- BODY -->
+<!-- hand gel -->
 
 <div class="menu-section">
 
-<div class="menu-title">BODY(女性限定)</div>
+<div class="menu-title">ハンドジェル</div>
 
 <div class="menu-item">
-<div class="menu-name">70min</div>
-<div class="menu-price">¥12,000</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">90min(ホットスーン込み)</div>
-<div class="menu-price">¥15,000</div>
+<div class="menu-name">持ち込みデザイン</div>
+<div class="menu-price">¥5,900〜</div>
 </div>
 
 <div class="menu-item">
-<div class="menu-name">120min(ホットスーン　フェイシャル込み)</div>
-<div class="menu-price">¥18,000</div>
+<div class="menu-name">ワンカラーのみ</div>
+<div class="menu-price">¥5,900</div>
 </div>
 
 <div class="menu-item">
-<div class="menu-name">※オプション ＋20〜30min(ムートンホイップスパ各所有り)</div>
-<div class="menu-price">¥2,000</div>
+<div class="menu-name">グラデーションのみ</div>
+<div class="menu-price">¥5,900</div>
 </div>
 
+<div class="menu-item">
+<div class="menu-name">フレンチのみ</div>
+<div class="menu-price">¥6,450</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-name">クリアのみ</div>
+<div class="menu-price">¥4,250</div>
+</div>
 </div>
 
 
-<!-- EYELASH -->
+<!-- foot gel -->
 
 <div class="menu-section">
 
-<div class="menu-title">EYELASH LIFT</div>
-
+<div class="menu-title">フットジェル</div>
 <div class="menu-item">
-<div class="menu-name">次世代まつ毛パーマ</div>
-<div class="menu-price">¥6,000</div>
+<div class="menu-name">ハンドジェルの料金に</div>
+<div class="menu-price">+¥600</div>
 </div>
 
 </div>
-
-
-<!-- MOUTON -->
-
-<div class="menu-section">
-
-<div class="menu-title">Mouton whip spa</div>
-
-<div class="menu-item">
-<div class="menu-name">フェイシャル・デコルテ 60min</div>
-<div class="menu-price">¥12,000</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">※オプション PINK whip</div>
-<div class="menu-price">¥3,000</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">背中 40min</div>
-<div class="menu-price">¥8,500</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">(女性限定)脚 40min</div>
-<div class="menu-price">¥8,500</div>
-</div>
-
-</div>
-
-
 <!-- ASUCA -->
 
 <div class="menu-section">
 
-<div class="menu-title">Asuca</div>
+<div class="menu-title">ネイルケア</div>
 
 <div class="menu-item">
-<div class="menu-name">黄土漢方よもぎ蒸し 35min</div>
-<div class="menu-price">¥3,500</div>
+<div class="menu-name">ハンドケア<br>甘皮除去(ウォーターケア)・爪形成<br>ハンドマッサージ(スクラブ)・保湿</div>
+<div class="menu-price">¥3,950</div>
+</div>
+<div class="menu-item">
+<div class="menu-name">フットケア<br>フットバス・甘皮除去・爪形成<br>角質除去(マシーンケア)・保湿</div>
+<div class="menu-price">¥3,950</div>
+</div>
+<div class="menu-item">
+<div class="menu-name">角質除去<br>(ジェル付け替えのお客様のみ)</div>
+<div class="menu-price">¥1,100</div>
+</div>
+<div class="menu-item">
+<div class="menu-name">ハンドマッサージ<br>(ジェル付け替えのお客様のみ)</div>
+<div class="menu-price">¥660</div>
+</div>
 </div>
 
-</div>
-
-
-<!-- SET MENU -->
+<!-- option -->
 
 <div class="menu-section">
 
-<div class="menu-title">SET MENU</div>
+<div class="menu-title">オプション</div>
 
 <div class="menu-item">
-<div class="menu-name">Head Spa ＆ Body 140min</div>
-<div class="menu-price">¥25,500</div>
-</div>
-
-<div class="menu-item">
-<div class="menu-name">Head Spa ＆ Eyelash Lift</div>
-<div class="menu-price">¥19,500</div>
+<div class="menu-name">ジェルでの長さ出し</div>
+<div class="menu-price">¥660</div>
 </div>
 
 <div class="menu-item">
-<div class="menu-name">Body ＆ Eyelash Lift</div>
-<div class="menu-price">¥16,500</div>
+<div class="menu-name">亀裂直し</div>
+<div class="menu-price">¥330</div>
 </div>
 
-</div>
-<div class="menu-note">
-<p>※表示価格はすべて税込価格です。</p>
-<p>※ヘアドライはご自身でお願いいたします。別途500円でドライも可能です。</p>
+<div class="menu-item">
+<div class="menu-name">ストーン等パーツ</div>
+<div class="menu-price">¥30〜</div>
 </div>
 
+<div class="menu-item">
+<div class="menu-name">フラットアート</div>
+<div class="menu-price">¥110〜</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-name">その他</div>
+<div class="menu-price">¥55〜</div>
+</div>
+</div>
 
 </div>
 
