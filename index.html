@@ -4,31 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tem Nails</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@200;300;400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-
+ 
 <body>
-
+ 
+<!-- ===== HEADER / HERO ===== -->
 <header>
+ 
+  <!-- スライドショー -->
   <div class="hero">
-  <img src="imagesTem/Tem1.jpg" class="hero-video">
-
-  <div class="hero-overlay"></div>
-
-
-   <div class="hero-text">
-  <p>〜忙しい毎日でも、可愛いネイルを〜</p>
-  <h1>
-    60分で理想の指先へ<br>
-        Tem Nails
-  </h1>
-     <a href=" " class="hero-btn" target="_blank">今すぐ予約する</a>
+    <div class="hero-slides">
+      <div class="hero-slide active">
+        <img src="imagesTem/Tem1.jpg" alt="">
+      </div>
+      <div class="hero-slide">
+        <img src="imagesTem/Tem2.jpg" alt="">
+      </div>
+      <div class="hero-slide">
+        <img src="imagesTem/Tem3.jpg" alt="">
+      </div>
+    </div>
+ 
+    <div class="hero-overlay"></div>
+ 
+    <div class="hero-text">
+      <p class="hero-sub">〜 忙しい毎日でも、可愛いネイルを 〜</p>
+      <h1 class="hero-title">
+        60分で理想の指先へ
+        <span>Tem Nails</span>
+      </h1>
+      <a href="　" class="hero-btn" target="_blank">今すぐ予約する</a>
+    </div>
+ 
+    <!-- スライドドット -->
+    <div class="hero-dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
     </div>
   </div>
-
+ 
+  <!-- ナビ -->
   <nav>
     <a href="#about">SERVICE</a>
     <a href="menu.html">MENU</a>
@@ -38,149 +58,209 @@
     <a href="contact.html">CONTACT</a>
   </nav>
 </header>
-
+ 
+<!-- ===== SERVICE ===== -->
 <section id="about">
   <div class="section-inner">
-    <h2>SERVICE</h2>
-
+    <div class="section-label">01</div>
+    <h2 class="section-title">SERVICE</h2>
+    <p class="section-sub">サービスのご紹介</p>
+ 
     <div class="about-flex">
-      <img src="imagesTem/Tem10.jpg" alt="service">
-
-      <div>
-        <p class="about">
-          Tem Nailsは、スピード×高技術にこだわったネイルサロンです。
+      <!-- 画像：2枚重ね -->
+      <div class="stacked-images">
+        <img src="imagesTem/Tem10.jpg" alt="service main" class="img-back">
+        <img src="imagesTem/Tem5.jpg" alt="service sub" class="img-front">
+      </div>
+ 
+      <div class="about-text">
+        <p class="about-lead">
+          Tem Nailsは、スピード×高技術に<br>こだわったネイルサロンです。
         </p>
-
-        <ul>
-          <li>◆ 最短60分のスピード施術</li>
-          <li>◆ 持ち込みデザインOK</li>
-          <li>◆ 丁寧なカウンセリング</li>
-          <li>◆ お子様同伴OK</li>
+        <ul class="feature-list">
+          <li><span class="feature-icon">◆</span> 最短60分のスピード施術</li>
+          <li><span class="feature-icon">◆</span> 持ち込みデザインOK</li>
+          <li><span class="feature-icon">◆</span> 丁寧なカウンセリング</li>
+          <li><span class="feature-icon">◆</span> お子様同伴OK</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-
+ 
+<!-- ===== ABOUT ===== -->
 <section id="point">
   <div class="section-inner">
-    <h2>ABOUT</h2> <!-- タイトルは横並びの親の前に置く -->
-
+    <div class="section-label">02</div>
+    <h2 class="section-title">ABOUT</h2>
+    <p class="section-sub">Tem Nailsについて</p>
+ 
     <div class="about-content">
-      <!-- 左：文章 -->
       <div class="about-text">
-        <p class="about">
-          任意の文章
+        <p class="about-lead">任意の文章</p>
+        <p class="about-body">
+          サロンのコンセプトや想いをここに書きます。
+          お客様への思い、技術へのこだわり、
+          サロンの雰囲気など自由に記載できます。
         </p>
       </div>
-
-      <!-- 右：画像 -->
-      <div class="about-images">
-        <img src="imagesTem/Tem4.jpg" alt="about1">
+ 
+      <!-- 画像：2枚ずらして重ねる -->
+      <div class="overlap-images">
+        <img src="imagesTem/Tem4.jpg" alt="about1" class="overlap-img-main">
+        <img src="imagesTem/Tem6.jpg" alt="about2" class="overlap-img-sub">
       </div>
     </div>
   </div>
 </section>
-
+ 
+<!-- ===== GALLERY ===== -->
 <section id="gallery">
-    <div class="section-inner">
-  <h2>GALLERY</h2>
-  <div class="gallery">
-    <div><img src="imagesTem/Tem4.jpg" alt=""></div>
-    <div><img src="imagesTem/Tem6.jpg" alt=""></div>
-    <div><img src="imagesTem/Tem24.jpg" alt=""></div>
-    <div><img src="imagesTem/Tem22.jpg" alt=""></div>
-    <div><img src="imagesTem/Tem20.jpg" alt=""></div>
-    <div><img src="imagesTem/Tem19.jpg" alt=""></div>
+  <div class="section-inner">
+    <div class="section-label">03</div>
+    <h2 class="section-title">GALLERY</h2>
+    <p class="section-sub">施術事例</p>
+ 
+    <div class="gallery">
+      <div class="gallery-item large"><img src="imagesTem/Tem4.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem6.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem24.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem22.jpg" alt=""></div>
+      <div class="gallery-item large"><img src="imagesTem/Tem20.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem19.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem18.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem17.jpg" alt=""></div>
+      <div class="gallery-item"><img src="imagesTem/Tem16.jpg" alt=""></div>
     </div>
   </div>
-
-  </div>
 </section>
-
+ 
+<!-- ===== INSTAGRAM ===== -->
 <section id="instagram" class="instagram-section">
-  <div class="reserve-section">
-    <h2>Instagram</h2>
+  <div class="insta-inner">
+    <div class="section-label light">04</div>
+    <h2 class="section-title light">Instagram</h2>
+    <p class="section-sub light">最新のネイルデザイン</p>
     <a href="https://www.instagram.com/tem_nails_by_temma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="insta-btn" target="_blank">
-        最新のネイルデザインはこちら</a>
+      <i class="fab fa-instagram"></i> 最新のネイルデザインはこちら
+    </a>
   </div>
 </section>
-
+ 
+<!-- ===== SCHEDULE ===== -->
 <section id="menu">
-    <div class="section-inner">
-  <h2>SCHEDULE</h2>
-  <div class="schedule-img">
-    <img src="imagesTem/Tem.jpg" alt="schedule">
-  </div>
+  <div class="section-inner">
+    <div class="section-label">05</div>
+    <h2 class="section-title">SCHEDULE</h2>
+    <p class="section-sub">営業スケジュール</p>
+    <div class="schedule-img">
+      <img src="imagesTem/Tem.jpg" alt="schedule">
+    </div>
   </div>
 </section>
-
+ 
+<!-- ===== STAFF ===== -->
 <section id="staff">
-    <div class="section-inner">
-  <h2>STAFF</h2>
-
-  <div class="staff-card">
-    <div class="spa-card">
-      <img src="imagesTem/Tem.jpg" alt="staff">
-    </div>
-    <h3>天間 ゆり</h3>
-    <p>スタッフからの一言</p>
-  </div>
-
-  <div class="staff-card">
-    <div class="spa-card">
-      <img src="imagesTem/Tem.jpg" alt="staff">
-    </div>
-    <h3>Narumi</h3>
-    <p>スタッフからの一言</p>
-  </div>
-
-  <div class="staff-card">
-    <div class="spa-card">
-      <img src="imagesTem/Tem.jpg" alt="staff">
-    </div>
-    <h3>Saki</h3>
-    <p>スタッフからの一言</p>
+  <div class="section-inner">
+    <div class="section-label">06</div>
+    <h2 class="section-title">STAFF</h2>
+    <p class="section-sub">スタッフ紹介</p>
+ 
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-img-wrap">
+          <img src="imagesTem/Tem.jpg" alt="天間ゆり">
+          <div class="staff-img-deco"></div>
+        </div>
+        <h3>天間 ゆり</h3>
+        <p class="staff-role">Nail Artist</p>
+        <p class="staff-comment">スタッフからの一言</p>
+      </div>
+ 
+      <div class="staff-card">
+        <div class="staff-img-wrap">
+          <img src="imagesTem/Tem.jpg" alt="Narumi">
+          <div class="staff-img-deco"></div>
+        </div>
+        <h3>Narumi</h3>
+        <p class="staff-role">Nail Artist</p>
+        <p class="staff-comment">スタッフからの一言</p>
+      </div>
+ 
+      <div class="staff-card">
+        <div class="staff-img-wrap">
+          <img src="imagesTem/Tem.jpg" alt="Saki">
+          <div class="staff-img-deco"></div>
+        </div>
+        <h3>Saki</h3>
+        <p class="staff-role">Nail Artist</p>
+        <p class="staff-comment">スタッフからの一言</p>
+      </div>
     </div>
   </div>
 </section>
-
+ 
+<!-- ===== RESERVE ===== -->
 <section id="info" class="reserve-section">
-  <!-- 背景画像 -->
   <img src="imagesTem/Tem7.jpg" alt="Reserve Background" class="reserve-bg">
-
-  <h2>RESERVE</h2>
-  <div class="reserve-center">
+  <div class="reserve-overlay"></div>
+  <div class="reserve-content">
+    <div class="section-label light">07</div>
+    <h2 class="section-title light">RESERVE</h2>
+    <p class="section-sub light">ご予約はこちら</p>
     <a href="reservation.html" class="reserve-btn" target="_blank">今すぐ予約する</a>
   </div>
 </section>
-
+ 
+<!-- ===== ACCESS ===== -->
 <section id="map">
   <div class="section-inner">
-    <h2>ACCESS</h2>
-
-    <p class="address">
-      〒039-1165<br>
-      青森県八戸市石堂4丁目13-5 10号室<br>
-      TEL 000-000-0000
-    </p>
-
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.4031642184977!2d141.47871039999998!3d40.53268119999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b51eca44dba95%3A0xa06d738d625b5e56!2z44CSMDM5LTExNjUg6Z2S5qOu55yM5YWr5oi45biC55-z5aCC77yU5LiB55uu77yR77yT4oiS77yVIOS4readkeS9j-WuhSAxMA!5e0!3m2!1sja!2sjp!4v1775023647585!5m2!1sja!2sjp"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
+    <div class="section-label">08</div>
+    <h2 class="section-title">ACCESS</h2>
+    <p class="section-sub">アクセス</p>
+ 
+    <div class="access-flex">
+      <div class="access-info">
+        <p class="address">
+          〒039-1165<br>
+          青森県八戸市石堂4丁目13-5 10号室<br>
+          TEL 000-000-0000
+        </p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.4031642184977!2d141.47871039999998!3d40.53268119999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b51eca44dba95%3A0xa06d738d625b5e56!2z44CSMDM5LTExNjUg6Z2S5qOu55yM5YWr5oi45biC55-z5aCC77yU5LiB55uu77yR77yT4oiS77yVIOS4readkeS9j-WuhSAxMA!5e0!3m2!1sja!2sjp!4v1775023647585!5m2!1sja!2sjp"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
     </div>
-
   </div>
 </section>
-
+ 
 <footer>
-  <p>© ネイルサロン　Tem Nails</p>
+  <p class="footer-logo">Tem Nails</p>
+  <p class="footer-copy">© ネイルサロン　Tem Nails</p>
 </footer>
-
+ 
+<script>
+// ===== スライドショー =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+ 
+function goToSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = n;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+ 
+function nextSlide() {
+  goToSlide((currentSlide + 1) % slides.length);
+}
+ 
+setInterval(nextSlide, 4000);
+</script>
+ 
 </body>
 </html>
