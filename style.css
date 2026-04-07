@@ -341,6 +341,21 @@ nav a:hover {
   font-size: 14px;
   line-height: 2;
   margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.about-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-detail p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.9;
+  padding-left: 12px;
+  border-left: 2px solid var(--green-light);
 }
 
 /* 2枚ずらし重ね → 1枚＋背景デコ */
@@ -720,7 +735,12 @@ footer {
   .img-back { width: 260px; height: 320px; }
   .stacked-images::before { width: 260px; height: 320px; }
   .overlap-img-main { width: 260px; height: 320px; }
-  .overlap-images::before { width: 260px; height: 320px; left: 12px; top: 12px; }
+  .overlap-images::before {
+    width: 260px;
+    height: 320px;
+    left: 12px;
+    top: 12px;
+  }
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
